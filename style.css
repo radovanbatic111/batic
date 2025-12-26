@@ -679,6 +679,10 @@ section {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .header {
+        position: sticky;
+        top: 0;
+    }
     .nav-list {
         position: fixed;
         top: 0;
