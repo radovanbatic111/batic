@@ -194,6 +194,11 @@ h1, h2, h3, h4, h5, h6, p, a, span, div, li, ul, ol, button, input, textarea, se
     transition: all 0.3s ease;
 }
 
+/* Sakrij mobilni logo na desktopu */
+.mobile-menu-logo {
+    display: none;
+}
+
 /* Hero Section */
 .hero {
     position: relative;
@@ -683,8 +688,21 @@ section {
 /* Responsive Design */
 @media (max-width: 768px) {
     .header {
-        position: sticky;
+        position: fixed;
         top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+    }
+
+    /* Dodaj padding-top na body da kompenzuje fixed header */
+    body {
+        padding-top: 80px;
+    }
+
+    .logo-img {
+        height: 50px;
+        width: 50px;
     }
     
     .nav-list {
@@ -720,19 +738,20 @@ section {
     }
 
     .mobile-menu-logo {
-        margin-top: auto;
-        padding-top: 1rem;
-        padding-bottom: 0.5rem;
+        display: block;
+        margin-top: 20px;
+        padding-top: 0;
+        padding-bottom: 0;
         border-top: none;
         border-bottom: none !important;
         text-align: left;
-        padding-left: 0;
+        padding-left: 20px;
         margin-left: 0;
     }
 
     .mobile-logo-img {
-        width: 50px;
-        height: 50px;
+        width: 70px;
+        height: 70px;
         border-radius: 50%;
         object-fit: cover;
         opacity: 0;
@@ -822,8 +841,8 @@ section {
         object-fit: cover;
     }
 
-    /* Slika za dubinsko pranje nameštaja - prikaži donji deo slike */
-    .usluga-card:first-child .usluga-image img {
+    /* Slika za dubinsko pranje tepiha (druga kartica) - prikaži donji deo slike */
+    .usluga-card:nth-child(2) .usluga-image img {
         object-position: bottom;
     }
 
