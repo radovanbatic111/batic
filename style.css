@@ -41,7 +41,7 @@ h1, h2, h3, h4, h5, h6, p, a, span, div, li, ul, ol, button, input, textarea, se
 /* Header */
 .header {
     background-color: #000000;
-    padding: 1rem 0;
+    padding: 1.15rem 0;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -70,17 +70,18 @@ h1, h2, h3, h4, h5, h6, p, a, span, div, li, ul, ol, button, input, textarea, se
     align-items: flex-end;
     position: relative;
     z-index: 1001;
+    margin-left: 10px;
 }
 
 .logo-img {
-    height: 90px;
-    width: 90px;
+    height: 104px;
+    width: 104px;
     border-radius: 50%;
     object-fit: cover;
     opacity: 0.95;
     transition: opacity 0.3s ease;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-    margin-bottom: -45px;
+    margin-bottom: -52px;
     position: relative;
     z-index: 1002;
 }
@@ -698,23 +699,24 @@ section {
         left: 0;
         right: 0;
         z-index: 1000;
-        overflow: hidden;
+        overflow: visible;
     }
 
     /* Dodaj padding-top na body da kompenzuje fixed header */
     body {
-        padding-top: 80px;
+        padding-top: 90px;
     }
 
-    /* Vrati originalnu veličinu loga u headeru na mobilnom */
+    /* Logo pola u headeru, pola van + 10% veći (66px) */
     .logo-img {
-        height: 60px;
-        width: 60px;
-        margin-bottom: 0;
+        height: 66px;
+        width: 66px;
+        margin-bottom: -33px;
     }
 
     .logo-section-left {
-        align-items: center;
+        align-items: flex-end;
+        margin-left: 0;
     }
     
     .nav-list {
@@ -749,16 +751,16 @@ section {
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
-    /* Logo u padajućem meniju - veći, 20px ispod Kontakta, 20px od leve margine */
+    /* Logo u padajućem meniju - ista razdaljina kao Kontakt, 40px ispod */
     .mobile-menu-logo {
         display: block;
-        margin-top: 20px;
+        margin-top: 40px;
         padding-top: 0;
         padding-bottom: 0;
         border-top: none;
         border-bottom: none !important;
         text-align: left;
-        padding-left: 20px;
+        padding-left: 0;
         margin-left: 0;
     }
 
