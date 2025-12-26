@@ -830,8 +830,9 @@ section {
     }
 
     .hero {
-        padding-top: 80px;
+        padding-top: 100px;
         margin-top: 0;
+        min-height: 100vh;
         background-attachment: scroll !important;
         background-size: cover !important;
         background-position: center center !important;

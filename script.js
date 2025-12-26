@@ -27,6 +27,8 @@ navLinks.forEach(link => {
     link.addEventListener('click', () => {
         navList.classList.remove('active');
         mobileMenuToggle.classList.remove('active');
+        // VAŽNO: Vrati mogućnost skrolovanja!
+        document.body.style.overflow = '';
     });
 });
 
