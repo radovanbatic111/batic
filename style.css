@@ -699,12 +699,17 @@ section {
         left: 0;
         right: 0;
         z-index: 1000;
-        overflow: visible;
+        overflow: visible !important;
     }
 
-    /* Dodaj padding-top na body da kompenzuje fixed header */
+    .header .container,
+    .header-content {
+        overflow: visible !important;
+    }
+
+    /* Dodaj padding-top na body da kompenzuje fixed header + logo koji izlazi */
     body {
-        padding-top: 90px;
+        padding-top: 100px;
     }
 
     /* Logo pola u headeru, pola van + 10% veći (66px) */
@@ -712,11 +717,14 @@ section {
         height: 66px;
         width: 66px;
         margin-bottom: -33px;
+        position: relative;
+        z-index: 1002;
     }
 
     .logo-section-left {
         align-items: flex-end;
         margin-left: 0;
+        overflow: visible;
     }
     
     .nav-list {
@@ -751,7 +759,7 @@ section {
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
-    /* Logo u padajućem meniju - ista razdaljina kao Kontakt, 40px ispod */
+    /* Logo u padajućem meniju - u ravni sa navigatorima */
     .mobile-menu-logo {
         display: block;
         margin-top: 40px;
