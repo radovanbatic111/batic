@@ -716,7 +716,27 @@ section {
     }
 
     .usluge-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
+    }
+
+    .usluga-card {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+    }
+
+    .usluga-image {
+        flex: 0 0 40%;
+        height: auto;
+        min-height: 150px;
+    }
+
+    .usluga-content {
+        flex: 1;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .cenovnik-grid,
