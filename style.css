@@ -826,6 +826,9 @@ section {
 
     .hero {
         padding-top: 0;
+        background-attachment: scroll;
+        background-size: cover;
+        background-position: center;
     }
 
     .hero-title {
