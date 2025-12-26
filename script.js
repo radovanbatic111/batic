@@ -36,6 +36,18 @@ navLinks.forEach(link => {
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
+        
+        // Zatvori mobilni meni i vrati scroll
+        if (navList) {
+            navList.classList.remove('active');
+        }
+        if (mobileMenuToggle) {
+            mobileMenuToggle.classList.remove('active');
+        }
+        document.body.style.overflow = '';
+        document.body.style.overflowY = 'auto';
+        document.documentElement.style.overflow = '';
+        
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
             const headerOffset = 80;

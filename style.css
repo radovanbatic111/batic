@@ -711,6 +711,11 @@ section {
     body {
         padding-top: 0 !important;
         margin-top: 0 !important;
+        overflow-y: auto !important;
+    }
+
+    html {
+        overflow-y: auto !important;
     }
 
     #home {
