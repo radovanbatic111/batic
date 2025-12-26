@@ -717,34 +717,47 @@ section {
 
     .usluge-grid {
         grid-template-columns: 1fr;
+        gap: 1rem;
     }
 
     .usluga-card {
         display: flex;
         flex-direction: row;
         align-items: stretch;
-        overflow: visible;
+        overflow: hidden;
+        min-height: 120px;
     }
 
     .usluga-image {
-        flex: 0 0 40%;
-        width: 40%;
+        flex: 0 0 45%;
+        width: 45%;
         height: auto;
-        min-height: 150px;
-        max-height: 200px;
+        min-height: 120px;
+        max-height: 150px;
     }
 
     .usluga-image img {
+        width: 100%;
         height: 100%;
         object-fit: cover;
     }
 
     .usluga-content {
         flex: 1;
-        padding: 1rem;
+        padding: 0.8rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
+    }
+
+    .usluga-content h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .usluga-content p {
+        font-size: 0.9rem;
+        line-height: 1.5;
     }
 
     .cenovnik-grid,

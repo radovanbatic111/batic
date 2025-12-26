@@ -6,8 +6,20 @@ if (mobileMenuToggle) {
     mobileMenuToggle.addEventListener('click', () => {
         navList.classList.toggle('active');
         mobileMenuToggle.classList.toggle('active');
+        document.body.style.overflow = navList.classList.contains('active') ? 'hidden' : '';
     });
 }
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (navList && navList.classList.contains('active')) {
+        if (!navList.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+            navList.classList.remove('active');
+            mobileMenuToggle.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    }
+});
 
 // Close mobile menu when clicking on a link
 const navLinks = document.querySelectorAll('.nav-link');
